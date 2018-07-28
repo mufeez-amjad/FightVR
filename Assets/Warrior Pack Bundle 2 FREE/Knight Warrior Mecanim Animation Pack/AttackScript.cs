@@ -8,7 +8,9 @@ public class AttackScript : MonoBehaviour {
     int health = 100;
     bool isDead = false;
     bool isMoving = false;
+    bool isAttacking = false;
 
+    float attackingDistance = 3.0f;
     //The target player
     public Transform player;
     //At what distance will the enemy walk towards the player?
@@ -26,11 +28,7 @@ public class AttackScript : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            health -= 50;
-        }
-
+      
         if (health <= 0 && !isDead)
         {
             die();
@@ -41,21 +39,32 @@ public class AttackScript : MonoBehaviour {
         transform.LookAt(player);
         //Calculate distance between player
         float distance = Vector3.Distance(transform.position, player.position);
+
+        if (distance <= attackingDistance && isMoving)
+        {
+            anim.SetBool("Moving", false);
+            isMoving = false;
+            isAttacking = true;
+            anim.SetTrigger("Attack1Trigger");
+        }
+
+        if (isAttacking && distance >= attackingDistance) {
+            anim.ResetTrigger("Attack1Trigger");
+            isAttacking = false;
+        }
+
         //If the distance is smaller than the walkingDistance
-        if (distance < walkingDistance)
+        else if (distance < walkingDistance && distance >= attackingDistance + 1f)
         {
             //Move the enemy towards the player with smoothdamp
-            transform.position = Vector3.SmoothDamp(transform.position, player.position, ref smoothVelocity, smoothTime);
+            //transform.position = Vector3.SmoothDamp(transform.position, player.position, ref smoothVelocity, smoothTime);
             if (!isMoving)
             {
-                anim.SetBool("Moving", false);
+                anim.SetBool("Moving", true);
                 isMoving = true;
             }
         }
-        else
-        {
-            anim.SetBool("Moving", false);
-        }
+        
     }
 
     void die () {
