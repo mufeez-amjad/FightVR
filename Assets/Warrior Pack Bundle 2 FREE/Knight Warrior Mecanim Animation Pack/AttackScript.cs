@@ -5,14 +5,10 @@ using UnityEngine.UI;
 
 public class AttackScript : MonoBehaviour {
 
-<<<<<<< HEAD
     private Animator anim;
     public float health = 100;
-=======
-    Animator anim;
+
     int maxHealth = 100;
-    int health = 100;
->>>>>>> a687106df278a68fad7b9bdb6bfa959926edca0a
     bool isDead = false;
     bool isMoving = false;
     bool isAttacking = false;
@@ -68,8 +64,6 @@ public class AttackScript : MonoBehaviour {
         }
         
     }
-<<<<<<< HEAD
-=======
 
     private Slider healthBar;
 
@@ -86,5 +80,4 @@ public class AttackScript : MonoBehaviour {
     void die () {
         anim.SetBool("Dead", true);
     }
->>>>>>> a687106df278a68fad7b9bdb6bfa959926edca0a
 }
