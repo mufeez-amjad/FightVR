@@ -1,11 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AttackScript : MonoBehaviour {
 
+<<<<<<< HEAD
     private Animator anim;
     public float health = 100;
+=======
+    Animator anim;
+    int maxHealth = 100;
+    int health = 100;
+>>>>>>> a687106df278a68fad7b9bdb6bfa959926edca0a
     bool isDead = false;
     bool isMoving = false;
     bool isAttacking = false;
@@ -23,6 +30,7 @@ public class AttackScript : MonoBehaviour {
     // Use this for initialization
     void Start () {
         anim = GetComponent<Animator>();
+        updateHealthBar();
 	}
 
     // Update is called once per frame
@@ -60,4 +68,23 @@ public class AttackScript : MonoBehaviour {
         }
         
     }
+<<<<<<< HEAD
+=======
+
+    private Slider healthBar;
+
+    void updateHealthBar(){
+        healthBar = GameObject.Find("Slider").GetComponent<Slider>();
+        healthBar.value = health;
+    }
+
+    void takeDamage(int amount){
+        health -=amount;
+        updateHealthBar();
+    }
+
+    void die () {
+        anim.SetBool("Dead", true);
+    }
+>>>>>>> a687106df278a68fad7b9bdb6bfa959926edca0a
 }
