@@ -12,5 +12,6 @@ public class CameraFollowPlayer : MonoBehaviour {
 	// Update is called once per frame
 	void LateUpdate () {
         this.transform.position = GameObject.FindWithTag("Player").transform.position;
+
 	}
 }

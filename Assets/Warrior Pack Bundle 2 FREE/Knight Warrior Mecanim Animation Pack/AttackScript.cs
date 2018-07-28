@@ -41,18 +41,19 @@ public class AttackScript : MonoBehaviour {
         transform.LookAt(player);
         //Calculate distance between player
         float distance = Vector3.Distance(transform.position, player.position);
+        
         //If the distance is smaller than the walkingDistance
-        if (distance < walkingDistance)
+        if (distance < walkingDistance && distance >= 3.0f)
         {
             //Move the enemy towards the player with smoothdamp
             transform.position = Vector3.SmoothDamp(transform.position, player.position, ref smoothVelocity, smoothTime);
             if (!isMoving)
             {
-                anim.SetBool("Moving", false);
+                //anim.SetBool("Moving", true);
                 isMoving = true;
             }
         }
-        else
+        if (distance == 3.0f)
         {
             anim.SetBool("Moving", false);
         }
