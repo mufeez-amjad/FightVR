@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class AttackScript : MonoBehaviour {
 
-    Animator anim;
-    int health = 100;
+    private Animator anim;
+    public float health = 100;
     bool isDead = false;
     bool isMoving = false;
     bool isAttacking = false;
@@ -28,13 +28,6 @@ public class AttackScript : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-      
-        if (health <= 0 && !isDead)
-        {
-            die();
-            isDead = true;
-        }
-
         //Look at the player
         transform.LookAt(player);
         //Calculate distance between player
@@ -54,7 +47,8 @@ public class AttackScript : MonoBehaviour {
         }
 
         //If the distance is smaller than the walkingDistance
-        else if (distance < walkingDistance && distance >= attackingDistance + 1f)
+        //condition:distance < walkingDistance && distance >= attackingDistance + 1f
+        else if (distance >= attackingDistance + 1f)
         {
             //Move the enemy towards the player with smoothdamp
             //transform.position = Vector3.SmoothDamp(transform.position, player.position, ref smoothVelocity, smoothTime);
@@ -65,9 +59,5 @@ public class AttackScript : MonoBehaviour {
             }
         }
         
-    }
-
-    void die () {
-        anim.SetBool("Dead", true);
     }
 }
