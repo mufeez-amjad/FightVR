@@ -19,7 +19,7 @@ public class PlayerBehaviour : MonoBehaviour {
 
             gameObject.transform.Translate(0f, 0f, 0.1f);
         }
-        if (Input.GetKeyDown(KeyCode.A)){ // TEMPORARY: made teleport
+        if (Input.GetKeyDown(KeyCode.A)){ // TEMPORARY: made teleport   
             gameObject.transform.position += gameObject.transform.forward * 10;
         }
     }

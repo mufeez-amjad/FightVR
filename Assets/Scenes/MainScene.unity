@@ -2025,7 +2025,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1556571038}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -1.8, y: 0, z: -11.4}
+  m_LocalPosition: {x: -1.8, y: 1.07, z: -11.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1022790609}
@@ -2289,6 +2289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cf22969bcb62314a9a26cf76d10bf54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
   player: {fileID: 1556571039}
   walkingDistance: 10
   smoothTime: 10

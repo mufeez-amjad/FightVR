@@ -24,40 +24,39 @@ public class AttackScript : MonoBehaviour {
     private Vector3 smoothVelocity = Vector3.zero;
 
     // Use this for initialization
-    void Start () {
+    void Start(){
         anim = GetComponent<Animator>();
         updateHealthBar();
 	}
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
         //Look at the player
-        transform.LookAt(player);
+        Vector3 locationOfPlayer = player.position;
+        locationOfPlayer.y = locationOfPlayer.y - (float)1.2; // this offset is to prevent the enemies from targetting your head.
+        // now they target a bit lower and stay on the floor
+        transform.LookAt(locationOfPlayer);
         //Calculate distance between player
         float distance = Vector3.Distance(transform.position, player.position);
 
-        if (distance <= attackingDistance && isMoving)
-        {
+        if (distance <= attackingDistance && isMoving) { // person is within range of the attack. stop moving
             anim.SetBool("Moving", false);
             isMoving = false;
             isAttacking = true;
             anim.SetTrigger("Attack1Trigger");
         }
 
-        if (isAttacking && distance >= attackingDistance) {
+        if (isAttacking && distance >= attackingDistance) { // person is out of range of the attack. keep moving.
             anim.ResetTrigger("Attack1Trigger");
             isAttacking = false;
         }
 
         //If the distance is smaller than the walkingDistance
         //condition:distance < walkingDistance && distance >= attackingDistance + 1f
-        else if (distance >= attackingDistance + 1f)
-        {
+        else if (distance >= attackingDistance + 1f) {
             //Move the enemy towards the player with smoothdamp
             //transform.position = Vector3.SmoothDamp(transform.position, player.position, ref smoothVelocity, smoothTime);
-            if (!isMoving)
-            {
+            if (!isMoving){
                 anim.SetBool("Moving", true);
                 isMoving = true;
             }
