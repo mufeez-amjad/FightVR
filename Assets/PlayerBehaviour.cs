@@ -23,4 +23,7 @@ public class PlayerBehaviour : MonoBehaviour {
             gameObject.transform.position += gameObject.transform.forward * 10;
         }
     }
+    void OnCollisionEnter(Collision col){
+        Debug.Log("Collided with player");
+    }
 }
