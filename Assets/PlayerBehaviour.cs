@@ -1,10 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class PlayerBehaviour : MonoBehaviour {
+    public Image healthFilter;
+
     Camera mainCamera;
 
+
+    private int maxHealth = 100;
+    private int health = 100;
 	// Use this for initialization
 	void Start () {
         mainCamera = Camera.main;
@@ -22,8 +29,23 @@ public class PlayerBehaviour : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.A)){ // TEMPORARY: made teleport   
             gameObject.transform.position += gameObject.transform.forward * 10;
         }
+        if (Input.GetKeyDown(KeyCode.J)){ // TEMPORARY: made damage self   
+            takeDamage(20);
+        }
     }
     void OnCollisionEnter(Collision col){
         Debug.Log("Collided with player");
+    }
+
+    private void checkFilter(){
+        Debug.Log(health);
+        if(health <= 80){
+           healthFilter.color = new Color(255, 0, 0, 0.4f);
+        }
+    }
+
+    public void takeDamage(int amount){
+        health -=amount;
+        checkFilter();
     }
 }
