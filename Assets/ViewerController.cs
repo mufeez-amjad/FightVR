@@ -6,12 +6,25 @@ using UnityEngine.Networking;
 using UnityEngine.XR;
 
 public class ViewerController : MonoBehaviour {
+    private float tapTime;
+    private bool VRMode = false;
     
 	void Start () {
         if (NetworkServer.active) {
             StartCoroutine(SwitchToVR());
         }
     }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0)) tapTime = Time.time;
+        if (!VRMode && Input.GetMouseButton(0) && ((Time.time - tapTime) > 1.5f)) {
+            StartCoroutine(SwitchToVR());
+            VRMode = true;
+        }
+    }
+
 
     // Call via `StartCoroutine(SwitchToVR())` from your code. Or, use
     // `yield SwitchToVR()` if calling from inside another coroutine.
