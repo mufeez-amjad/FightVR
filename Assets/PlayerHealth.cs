@@ -42,7 +42,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
-
+        Debug.Log("Taking damage");
         // Reduce the current health by the damage amount.
         currentHealth -= amount;
 
@@ -51,11 +51,5 @@ public class PlayerHealth : MonoBehaviour
             // ... it should die.
             Debug.Log("Player dead!");
         }
-    }
-
-
-    void Death()
-    {
-        
     }
 }

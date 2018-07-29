@@ -12,12 +12,14 @@ public class SpawnScript : MonoBehaviour
     public float spawnLeastWait;
     public int startWait;
     public bool stop;
-
     int randEnemy;
+
+    GameObject knight;
 
     // Use this for initialization
     void Start()
     {
+        //knight = GameObject.FindGameObjectWithTag("Knight Warrior");
         StartCoroutine(waitSpawner());
     }
 
@@ -28,6 +30,15 @@ public class SpawnScript : MonoBehaviour
 
         
 
+    }
+
+    void stopAnimation()
+    {
+        foreach (GameObject g in enemies)
+        {
+            if (g == knight) {
+            }
+        }
     }
 
     IEnumerator waitSpawner()

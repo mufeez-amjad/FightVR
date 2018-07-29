@@ -52,7 +52,6 @@ public class PlayerBehaviour : MonoBehaviour {
 
 
     private void checkFilter(){
-        Debug.Log(health);
         if(health <= 10){
            healthFilter.color = new Color(200, 0, 0, 0.9f);
            fadeTime = 3.0f;
