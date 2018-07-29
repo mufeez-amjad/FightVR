@@ -15,7 +15,7 @@ public class AttackScript : MonoBehaviour {
 
     float attackingDistance = 2.5f;
     //The target player
-    public Transform player;
+    Transform player;
     //At what distance will the enemy walk towards the player?
     public float walkingDistance = 10.0f;
     //In what time will the enemy complete the journey between its position and the players position
@@ -25,6 +25,7 @@ public class AttackScript : MonoBehaviour {
 
     // Use this for initialization
     void Start(){
+        player = GameObject.FindWithTag("Player").transform;
         anim = GetComponent<Animator>();
         updateHealthBar();
 	}
