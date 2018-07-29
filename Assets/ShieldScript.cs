@@ -14,6 +14,7 @@ public class ShieldScript : MonoBehaviour {
 		
 	}
 	void  OnCollisionEnter(){
-		Debug.Log("HIT DETECTED");
-	}
+        //this.transform.parent.gameObject.get
+
+    }
 }

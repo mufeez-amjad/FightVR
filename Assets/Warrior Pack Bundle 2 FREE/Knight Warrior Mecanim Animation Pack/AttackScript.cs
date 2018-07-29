@@ -13,7 +13,7 @@ public class AttackScript : MonoBehaviour {
     bool isMoving = false;
     bool isAttacking = false;
 
-    float attackingDistance = 3.0f;
+    float attackingDistance = 2.5f;
     //The target player
     public Transform player;
     //At what distance will the enemy walk towards the player?
