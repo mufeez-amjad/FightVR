@@ -8,6 +8,7 @@ TagManager:
   - NetworkManager
   - ArmCoordinateSpace
   - WeaponUI
+  - Enemy
   layers:
   - Default
   - TransparentFX

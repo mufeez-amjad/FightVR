@@ -41,6 +41,11 @@ public class SpawnScript : MonoBehaviour
         }
     }
 
+    public void startStop()
+    {
+        stop = !stop;
+    }
+
     IEnumerator waitSpawner()
     {
         yield return new WaitForSeconds(startWait);
