@@ -17,13 +17,20 @@ public class PlayerBehaviour : MonoBehaviour {
     //}
 
     // Update is called once per frame
-    void Update()
-    {
-        this.gameObject.transform.eulerAngles = new Vector3(0f, Camera.main.transform.eulerAngles.y, 0f);
+    void Update() {
+        
+        //this.gameObject.transform.eulerAngles = new Vector3(0f, Camera.main.transform.eulerAngles.y, 0f);
 
         if (weaponController != null) {
             weaponController.transform.position = this.transform.position;
             weaponController.transform.rotation = this.transform.rotation;
+        }
+        if (Input.GetKeyDown(KeyCode.A)) { // TEMPORARY: made teleport
+            Vector3 cameraOrientation = GameObject.FindWithTag("MainCamera").transform.forward; 
+            Vector3 cameraOrientation2 = new Vector3(cameraOrientation.x,0.0f,cameraOrientation.z);
+            if(Vector3.Distance(transform.position + cameraOrientation2 * 2, new Vector3(0,0,0))  <=16.2f){
+                gameObject.transform.position += cameraOrientation2 * 2;
+            }
         }
 
         //       if (Input.GetKey(KeyCode.W) || Input.GetMouseButton(0)) {
