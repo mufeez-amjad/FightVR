@@ -11,9 +11,8 @@ public class MenuController : MonoBehaviour {
 
     void Start() {
         networkManager = NetworkManager.singleton;
-
-        Screen.sleepTimeout = SleepTimeout.NeverSleep;
-        Screen.orientation = ScreenOrientation.Portrait;
+        
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
     }
 
     public void startViewer() {
