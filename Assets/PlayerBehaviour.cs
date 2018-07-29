@@ -19,7 +19,7 @@ public class PlayerBehaviour : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         
-        //this.gameObject.transform.eulerAngles = new Vector3(0f, Camera.main.transform.eulerAngles.y, 0f);
+        this.gameObject.transform.eulerAngles = new Vector3(0f, Camera.main.transform.eulerAngles.y, 0f);
 
         if (weaponController) {
             weaponController.transform.position = this.transform.position;
