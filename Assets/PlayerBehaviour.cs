@@ -7,32 +7,39 @@ using UnityEngine.UI;
 public class PlayerBehaviour : MonoBehaviour {
     public Image healthFilter;
 
-    Camera mainCamera;
-
+    private GameObject weaponController;
 
     private int maxHealth = 100;
     private int health = 100;
-	// Use this for initialization
-	void Start () {
-        mainCamera = Camera.main;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        this.gameObject.transform.eulerAngles = new Vector3(0f, mainCamera.transform.eulerAngles.y, 0f);
+    // Use this for initialization
+    //void Start () {
+    //       mainCamera = Camera.main;
+    //}
 
-		if (Input.GetKey(KeyCode.W) || Input.GetMouseButton(0)){
-            float facing = mainCamera.transform.eulerAngles.y;
+    // Update is called once per frame
+    void Update()
+    {
+        this.gameObject.transform.eulerAngles = new Vector3(0f, Camera.main.transform.eulerAngles.y, 0f);
+        weaponController.transform.position = this.transform.position;
+        weaponController.transform.rotation = this.transform.rotation;
 
-            gameObject.transform.Translate(0f, 0f, 0.1f);
-        }
-        if (Input.GetKeyDown(KeyCode.A)){ // TEMPORARY: made teleport   
-            gameObject.transform.position += gameObject.transform.forward * 10;
-        }
-        if (Input.GetKeyDown(KeyCode.J)){ // TEMPORARY: made damage self   
-            takeDamage(20);
-        }
+        //       if (Input.GetKey(KeyCode.W) || Input.GetMouseButton(0)) {
+        //           float facing = mainCamera.transform.eulerAngles.y;
+
+        //           gameObject.transform.Translate(0f, 0f, 0.1f);
+        //       }
+        //       if (Input.GetKeyDown(KeyCode.A)) { // TEMPORARY: made teleport   
+        //           gameObject.transform.position += gameObject.transform.forward * 10;
+        //       }
+        //       if (Input.GetKeyDown(KeyCode.J)) { // TEMPORARY: made damage self   
+        //           takeDamage(20);
+        //       }
     }
+
+    public void setWeaponController(GameObject weaponController) {
+        this.weaponController = weaponController;
+    }
+
     void OnCollisionEnter(Collision col){
         Debug.Log("Collided with player");
     }
@@ -52,6 +59,9 @@ public class PlayerBehaviour : MonoBehaviour {
 
 
     private void checkFilter(){
+        //float opacity = Mathf.InverseLerp(100, 0, health);
+        //healthFilter.color = new Color(200, 0, 0, opacity);
+
         if(health <= 10){
            healthFilter.color = new Color(200, 0, 0, 0.9f);
            fadeTime = 3.0f;

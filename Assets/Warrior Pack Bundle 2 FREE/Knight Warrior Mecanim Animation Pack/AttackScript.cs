@@ -34,11 +34,14 @@ public class AttackScript : MonoBehaviour {
     void Update(){
         //Look at the player
         Vector3 locationOfPlayer = player.position;
-        locationOfPlayer.y = locationOfPlayer.y - (float)1.2; // this offset is to prevent the enemies from targetting your head.
-        // now they target a bit lower and stay on the floor
-        transform.LookAt(locationOfPlayer);
-        //Calculate distance between player
-        float distance = Vector3.Distance(transform.position, player.position);
+        //locationOfPlayer.y = locationOfPlayer.y - 3f; // this offset is to prevent the enemies from targetting your head.
+        //// now they target a bit lower and stay on the floor
+        Vector3 lookTarget = new Vector3(locationOfPlayer.x, this.transform.position.y, locationOfPlayer.z);
+        transform.LookAt(lookTarget);
+        //Calculate 2D distance to player
+        float dX = transform.position.x - player.position.x;
+        float dZ = transform.position.z - player.position.z;
+        float distance = Mathf.Sqrt(dX*dX + dZ*dZ);
 
         if (distance <= attackingDistance && isMoving) { // person is within range of the attack. stop moving
             anim.SetBool("Moving", false);

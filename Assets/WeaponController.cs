@@ -10,6 +10,8 @@ public class WeaponController : NetworkBehaviour {
 	void Start () {
         arm = GameObject.FindWithTag("Arm");
 
+        GameObject.FindWithTag("Player").GetComponent<PlayerBehaviour>().setWeaponController(this.gameObject);
+
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         Screen.orientation = ScreenOrientation.Portrait;
 
@@ -19,6 +21,8 @@ public class WeaponController : NetworkBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (!isLocalPlayer) return;
+
+        this.gameObject.transform.eulerAngles = new Vector3(0f, Camera.main.transform.eulerAngles.y, 0f);
 
         Quaternion targetRotation = GyroToUnity(Input.gyro.attitude);
         Debug.Log("gyro.attitude: " + targetRotation.eulerAngles.ToString("F6"));
