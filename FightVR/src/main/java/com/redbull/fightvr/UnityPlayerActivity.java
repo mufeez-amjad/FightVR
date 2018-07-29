@@ -23,6 +23,9 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class UnityPlayerActivity extends Activity
 {
     protected UnityPlayer mUnityPlayer; // don't change the name of this variable; referenced from native code
@@ -154,7 +157,11 @@ public class UnityPlayerActivity extends Activity
             mUnityPlayer.lowMemory();
         }
     }
+    public void sendQDataToUnity(float pitch, float roll, float yaw) {
+        String CSV = String.valueOf(pitch)+","+String.valueOf(roll)+","+String.valueOf(yaw);
 
+        UnityPlayer.UnitySendMessage("","","");
+    }
     // This ensures the layout will be correct.
     @Override public void onConfigurationChanged(Configuration newConfig)
     {
