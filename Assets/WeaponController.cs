@@ -5,10 +5,12 @@ using UnityEngine.Networking;
 
 public class WeaponController : NetworkBehaviour {
     private GameObject arm;
+    private GameObject armOffset;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         arm = GameObject.FindWithTag("Arm");
+        armOffset = GameObject.FindWithTag("ArmCoordinateSpace");
 
         GameObject.FindWithTag("Player").GetComponent<PlayerBehaviour>().setWeaponController(this.gameObject);
 
@@ -24,15 +26,21 @@ public class WeaponController : NetworkBehaviour {
 
         this.gameObject.transform.eulerAngles = new Vector3(0f, Camera.main.transform.eulerAngles.y, 0f);
 
-        Quaternion targetRotation = GyroToUnity(Input.gyro.attitude);
-        Debug.Log("gyro.attitude: " + targetRotation.eulerAngles.ToString("F6"));
-        Debug.Log("gyro.gravity:  " + Input.gyro.gravity.ToString("F6"));
-        Debug.Log("acceleration:  " + Input.acceleration.ToString("F6"));
-        arm.transform.rotation = targetRotation;
+        arm.transform.rotation = Input.gyro.attitude;
+        //Quaternion targetRotation = GyroToUnity(Input.gyro.attitude);
+        //arm.transform.rotation = targetRotation;
     }
 
-    private static Quaternion GyroToUnity(Quaternion q) {
-        return q;
-        //return new Quaternion(q.x, q.y, -q.z, -q.w);
+    public void Calibrate()
+    {
+        Quaternion deltaRotation = new Quaternion();
+        deltaRotation.SetFromToRotation(Input.gyro.gravity, Vector3.down);
+
+        armOffset.transform.rotation = deltaRotation;
     }
+
+    //private static Quaternion GyroToUnity(Quaternion q) {
+    //    return q;
+    //    //return new Quaternion(q.x, q.y, -q.z, -q.w);
+    //}
 }

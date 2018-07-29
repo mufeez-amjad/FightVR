@@ -2,30 +2,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.XR;
 
 public class ViewerController : MonoBehaviour {
-    private float tapTime;
-    public bool VRMode = false;
-
-	// Use this for initialization
+    
 	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (Input.GetMouseButtonDown(0)) tapTime = Time.time;
-        if (!VRMode && Input.GetMouseButton(0) && ((Time.time - tapTime) > 1.0f)) {
+        if (NetworkServer.active) {
+            Screen.orientation = ScreenOrientation.LandscapeLeft;
             StartCoroutine(SwitchToVR());
-            VRMode = true;
         }
     }
 
     // Call via `StartCoroutine(SwitchToVR())` from your code. Or, use
     // `yield SwitchToVR()` if calling from inside another coroutine.
-    IEnumerator SwitchToVR()
-    {
+    IEnumerator SwitchToVR() {
         // Device names are lowercase, as returned by `XRSettings.supportedDevices`.
         string desiredDevice = "cardboard"; // Or "cardboard".
 

@@ -17,11 +17,12 @@ public class PlayerBehaviour : MonoBehaviour {
     //}
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         this.gameObject.transform.eulerAngles = new Vector3(0f, Camera.main.transform.eulerAngles.y, 0f);
-        weaponController.transform.position = this.transform.position;
-        weaponController.transform.rotation = this.transform.rotation;
+        if (weaponController) {
+            weaponController.transform.position = this.transform.position;
+            weaponController.transform.rotation = this.transform.rotation;
+        }
 
         //       if (Input.GetKey(KeyCode.W) || Input.GetMouseButton(0)) {
         //           float facing = mainCamera.transform.eulerAngles.y;

@@ -1083,7 +1083,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17445005f0560ec41866f0073267dfe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VRMode: 0
 --- !u!4 &2062272188
 Transform:
   m_ObjectHideFlags: 0

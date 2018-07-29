@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Arm
   - NetworkManager
+  - ArmCoordinateSpace
+  - WeaponUI
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - 
   - PostProcessing
   - 
-  - 
+  - WeaponUI
   - 
   - 
   - 
