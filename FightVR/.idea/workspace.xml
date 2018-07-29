@@ -2,28 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67f8086d-11ef-4db2-8be2-519c3fc1bb6d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___C__Users_advai_Documents_adrenalan_export5_FightVR_libs_libprotobuf_java_nano_jar_unspecified_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___C__Users_advai_Documents_adrenalan_export5_FightVR_libs_unity_classes_jar_unspecified_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__gvr__aar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__gvr__aar.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__gvr_keyboard__aar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__gvr_keyboard__aar.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__gvr_keyboardsupport_release__aar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__gvr_keyboardsupport_release__aar.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__gvr_permissionsupport_release__aar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__gvr_permissionsupport_release__aar.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__unitygvr__aar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__unitygvr__aar.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/FightVR.iml" afterPath="$PROJECT_DIR$/FightVR.iml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/redbull/fightvr/UnityPlayerActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/redbull/fightvr/UnityPlayerActivity.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -1369,6 +1349,14 @@
       <option name="presentableId" value="Default" />
       <updated>1532831453474</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added the send method for sending data to Unity">
+      <created>1532832233681</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1532832233681</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1407,6 +1395,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added the send method for sending data to Unity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the send method for sending data to Unity" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
