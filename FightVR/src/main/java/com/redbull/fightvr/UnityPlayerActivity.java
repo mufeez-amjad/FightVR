@@ -50,6 +50,7 @@ public class UnityPlayerActivity extends Activity
         @Override
         public void onGyroscopeData(Myo myo, long timestamp, Vector3 gyro) {
             Log.d("Test", "onGyroscopeData: " + gyro.x() + " " + gyro.y() + " " + gyro.z());
+            sendQDataToUnity(gyro.x(), gyro.y(), gyro.z());
         }
 
         @Override
@@ -157,10 +158,10 @@ public class UnityPlayerActivity extends Activity
             mUnityPlayer.lowMemory();
         }
     }
-    public void sendQDataToUnity(float pitch, float roll, float yaw) {
+    public void sendQDataToUnity(double pitch, double roll, double yaw) {
         String CSV = String.valueOf(pitch)+","+String.valueOf(roll)+","+String.valueOf(yaw);
 
-        UnityPlayer.UnitySendMessage("","","");
+        UnityPlayer.UnitySendMessage("Player","gotMessage",CSV);
     }
     // This ensures the layout will be correct.
     @Override public void onConfigurationChanged(Configuration newConfig)
