@@ -12,12 +12,14 @@ public class SpawnScript : MonoBehaviour
     public float spawnLeastWait;
     public int startWait;
     public bool stop;
-
     int randEnemy;
+
+    GameObject knight;
 
     // Use this for initialization
     void Start()
     {
+        //knight = GameObject.FindGameObjectWithTag("Knight Warrior");
         StartCoroutine(waitSpawner());
     }
 
@@ -30,19 +32,33 @@ public class SpawnScript : MonoBehaviour
 
     }
 
+    void stopAnimation()
+    {
+        foreach (GameObject g in enemies)
+        {
+            if (g == knight) {
+            }
+        }
+    }
+
+    public void startStop()
+    {
+        stop = !stop;
+    }
+
     IEnumerator waitSpawner()
     {
         yield return new WaitForSeconds(startWait);
 
         while (!stop)
         {
-            randEnemy = Random.Range(0, 2);
+            randEnemy = Random.Range(0, enemies.Length);
             float minDistance = 30.0f;
             float maxDistance = 30.0f;
             float distance = Random.Range(minDistance, maxDistance);
             float angle = Random.Range(-Mathf.PI, Mathf.PI);
 
-            Vector3 spawnPosition = new Vector3(-1.8f, 0, -11.4f);
+            Vector3 spawnPosition = this.transform.position;
             spawnPosition += new Vector3(Mathf.Cos(angle), 0, Mathf.Sin(angle)) * distance;
             spawnPosition.x = Mathf.Clamp(spawnPosition.x, -spawnValues.x, spawnValues.x);
             spawnPosition.y = spawnValues.y;
