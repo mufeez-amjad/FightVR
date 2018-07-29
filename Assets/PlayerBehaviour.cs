@@ -38,7 +38,7 @@ public class PlayerBehaviour : MonoBehaviour {
     }
 
     private YieldInstruction fadeInstruction = new YieldInstruction();
-    float fadeTime = 2.0f;
+    float fadeTime;
     IEnumerator FadeOut(Image image){
         float elapsedTime = 0.0f;
         Color c = image.color;
@@ -54,15 +54,20 @@ public class PlayerBehaviour : MonoBehaviour {
     private void checkFilter(){
         Debug.Log(health);
         if(health <= 10){
-           healthFilter.color = new Color(255, 0, 0, 0.9f);
+           healthFilter.color = new Color(200, 0, 0, 0.9f);
+           fadeTime = 3.0f;
         }else if(health <= 20){
-           healthFilter.color = new Color(255, 0, 0, 0.6f);
+           healthFilter.color = new Color(140, 0, 0, 0.6f);
+           fadeTime = 2.0f;
         }else if(health <= 40){
-           healthFilter.color = new Color(255, 0, 0, 0.35f);
+           healthFilter.color = new Color(100, 0, 0, 0.35f);
+           fadeTime = 1.2f;
         }else if(health <= 60){
-           healthFilter.color = new Color(255, 0, 0, 0.1f);
+           healthFilter.color = new Color(60, 0, 0, 0.1f);
+           fadeTime = .6f;
         }else if(health <= 80){
-           healthFilter.color = new Color(255, 0, 0, 0.05f);
+           healthFilter.color = new Color(20, 0, 0, 0.05f);
+           fadeTime = .2f;
         }
         StartCoroutine(FadeOut(healthFilter));
     }
