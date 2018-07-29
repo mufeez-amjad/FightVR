@@ -9,7 +9,6 @@ public class ViewerController : MonoBehaviour {
     
 	void Start () {
         if (NetworkServer.active) {
-            Screen.orientation = ScreenOrientation.LandscapeLeft;
             StartCoroutine(SwitchToVR());
         }
     }

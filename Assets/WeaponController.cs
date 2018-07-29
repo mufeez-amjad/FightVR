@@ -14,8 +14,10 @@ public class WeaponController : NetworkBehaviour {
 
         GameObject.FindWithTag("Player").GetComponent<PlayerBehaviour>().setWeaponController(this.gameObject);
 
-        Screen.sleepTimeout = SleepTimeout.NeverSleep;
-        Screen.orientation = ScreenOrientation.Portrait;
+        if (isLocalPlayer) {
+            Screen.sleepTimeout = SleepTimeout.NeverSleep;
+            Screen.orientation = ScreenOrientation.Portrait;
+        }
 
         if (!Input.gyro.enabled) Input.gyro.enabled = true;
     }
