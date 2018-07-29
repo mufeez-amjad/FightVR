@@ -50,7 +50,7 @@ public class UnityPlayerActivity extends Activity
         @Override
         public void onGyroscopeData(Myo myo, long timestamp, Vector3 gyro) {
             Log.d("Test", "onGyroscopeData: " + gyro.x() + " " + gyro.y() + " " + gyro.z());
-            sendQDataToUnity(gyro.x(), gyro.y(), gyro.z());
+//            sendQDataToUnity(gyro.x(), gyro.y(), gyro.z());
         }
 
         @Override
@@ -60,10 +60,15 @@ public class UnityPlayerActivity extends Activity
             float pitch = (float) Math.toDegrees(Quaternion.pitch(rotation));
             float yaw = (float) Math.toDegrees(Quaternion.yaw(rotation));
             // Adjust roll and pitch for the orientation of the Myo on the arm.
-            if (myo.getXDirection() == XDirection.TOWARD_ELBOW) {
-                roll *= -1;
-                pitch *= -1;
-            }
+//            if (myo.getXDirection() == XDirection.TOWARD_ELBOW) {
+////                yaw *= -1;
+////                pitch *= -1;
+//            }
+//            pitch *= -1;
+            yaw *= -1;
+            // pitch is up and down
+            // yaw is left and right
+            sendQDataToUnity(pitch,yaw,roll);
             // Next, we apply a rotation to the text view using the roll, pitch, and yaw.
 //            Log.d("Ord", ""+ yaw);// + "" + pitch + " " + yaw);
         }

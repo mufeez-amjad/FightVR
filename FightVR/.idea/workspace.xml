@@ -11,16 +11,6 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/assets/bin/Data/globalgamemanagers" afterPath="$PROJECT_DIR$/src/main/assets/bin/Data/globalgamemanagers" />
-      <change beforePath="$PROJECT_DIR$/src/main/assets/bin/Data/globalgamemanagers.assets" afterPath="$PROJECT_DIR$/src/main/assets/bin/Data/globalgamemanagers.assets" />
-      <change beforePath="$PROJECT_DIR$/src/main/assets/bin/Data/level0.split0" afterPath="$PROJECT_DIR$/src/main/assets/bin/Data/level0.split0" />
-      <change beforePath="$PROJECT_DIR$/src/main/assets/bin/Data/level0.split1" afterPath="$PROJECT_DIR$/src/main/assets/bin/Data/level0.split1" />
-      <change beforePath="$PROJECT_DIR$/src/main/assets/bin/Data/level0.split2" afterPath="$PROJECT_DIR$/src/main/assets/bin/Data/level0.split2" />
-      <change beforePath="$PROJECT_DIR$/src/main/assets/bin/Data/level0.split3" afterPath="$PROJECT_DIR$/src/main/assets/bin/Data/level0.split3" />
-      <change beforePath="$PROJECT_DIR$/src/main/assets/bin/Data/level0.split4" afterPath="$PROJECT_DIR$/src/main/assets/bin/Data/level0.split4" />
-      <change beforePath="$PROJECT_DIR$/src/main/assets/bin/Data/level0.split5" afterPath="$PROJECT_DIR$/src/main/assets/bin/Data/level0.split5" />
-      <change beforePath="$PROJECT_DIR$/src/main/assets/bin/Data/level0.split6" afterPath="$PROJECT_DIR$/src/main/assets/bin/Data/level0.split6" />
-      <change beforePath="$PROJECT_DIR$/src/main/assets/bin/Data/sharedassets0.assets" afterPath="$PROJECT_DIR$/src/main/assets/bin/Data/sharedassets0.assets" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/redbull/fightvr/UnityPlayerActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/redbull/fightvr/UnityPlayerActivity.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,8 +30,8 @@
       <file leaf-file-name="UnityPlayerActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/redbull/fightvr/UnityPlayerActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="60" column="44" lean-forward="true" selection-start-line="60" selection-start-column="44" selection-end-line="60" selection-end-column="44" />
+            <state relative-caret-position="680">
+              <caret line="69" column="36" lean-forward="false" selection-start-line="69" selection-start-column="36" selection-end-line="69" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -1592,7 +1582,7 @@
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="device.picker.selection" value="1163375571" />
+    <property name="device.picker.selection" value="7b3347cc" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -1770,7 +1760,14 @@
       <option name="project" value="LOCAL" />
       <updated>1532832290212</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Able to trigger Unity method and send data to rotate object.">
+      <created>1532836145004</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1532836145004</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1814,19 +1811,20 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added the send method for sending data to Unity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the send method for sending data to Unity" />
+    <MESSAGE value="Able to trigger Unity method and send data to rotate object." />
+    <option name="LAST_COMMIT_MESSAGE" value="Able to trigger Unity method and send data to rotate object." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/redbull/fightvr/UnityPlayerActivity.java</url>
-          <line>163</line>
+          <line>168</line>
           <properties />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/redbull/fightvr/UnityPlayerActivity.java</url>
-          <line>164</line>
+          <line>169</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
@@ -2221,8 +2219,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/redbull/fightvr/UnityPlayerActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="60" column="44" lean-forward="true" selection-start-line="60" selection-start-column="44" selection-end-line="60" selection-end-column="44" />
+        <state relative-caret-position="680">
+          <caret line="69" column="36" lean-forward="false" selection-start-line="69" selection-start-column="36" selection-end-line="69" selection-end-column="36" />
           <folding />
         </state>
       </provider>
