@@ -447,7 +447,19 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
+--- !u!65 &318993978
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 318993972}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.27329722, y: 0.06982263, z: 0.27777568}
+  m_Center: {x: -0.000000029802322, y: 0, z: 0}
 --- !u!1 &321115020
 GameObject:
   m_ObjectHideFlags: 0
@@ -2400,6 +2412,8 @@ GameObject:
   - component: {fileID: 1718279616}
   - component: {fileID: 1718279615}
   - component: {fileID: 1718279613}
+  - component: {fileID: 1718279617}
+  - component: {fileID: 1718279614}
   m_Layer: 0
   m_Name: Knight Warrior
   m_TagString: Player
@@ -2422,6 +2436,21 @@ MonoBehaviour:
   player: {fileID: 1556571039}
   walkingDistance: 10
   smoothTime: 10
+--- !u!54 &1718279614
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1718279612}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!95 &1718279615
 Animator:
   serializedVersion: 3
@@ -2460,6 +2489,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1718279617
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1718279612}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1733185681
 GameObject:
   m_ObjectHideFlags: 0

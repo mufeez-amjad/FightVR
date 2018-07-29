@@ -6,15 +6,14 @@ public class ShieldScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Debug.Log("hi");
-		OnTriggerEnter();
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
-	void  OnTriggerEnter(){
+	void  OnCollisionEnter(){
 		Debug.Log("HIT DETECTED");
 	}
 }
