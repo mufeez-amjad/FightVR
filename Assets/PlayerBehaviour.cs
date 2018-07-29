@@ -14,10 +14,8 @@ public class PlayerBehaviour : MonoBehaviour {
 	void Update () {
         this.gameObject.transform.eulerAngles = new Vector3(0f, mainCamera.transform.eulerAngles.y, 0f);
 
-		if (Input.GetKey(KeyCode.W) || Input.GetMouseButton(0)){
-            float facing = mainCamera.transform.eulerAngles.y;
-
-            gameObject.transform.Translate(0f, 0f, 0.1f);
-        }
+		//if (Input.GetKey(KeyCode.W) || Input.GetMouseButton(0)){
+  //          this.gameObject.transform.Translate(0f, 0f, 0.1f);
+  //      }
     }
 }
