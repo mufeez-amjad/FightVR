@@ -1,4 +1,11 @@
 # FightVR
+&nbsp;
+
+![Shield](./shield.jpg)
+![Sword](./sword.jpg)
+*Gameplay Screenshots*
+
+&nbsp;
 ## Inspiration
 As avid gamers, we've always strived to fully immerse ourselves within the game. Whether it be ultrawide 21:9 curved 34 inch monitors or virtual reality, we love delving deep into the fantastical realm of video games. We wished to take this immersion to the next level using hardware input devices to control in-game objects. Currently, virtual reality headsets with dedicated controllers such as the HTC Vive and Oculus Rift are prohibitively expensive for the average consumer, leading to the fact that many have not experienced the true sensation of being immersed into the world of video games. As such, we built a game that allows consumers to use relatively inexpensive devices, including their existing phones, to take part in such an experience.
 
