@@ -3,7 +3,6 @@
 
 ![Shield](./shield.jpg)
 ![Sword](./sword.jpg)
-*Gameplay Screenshots*
 
 &nbsp;
 ## Inspiration
